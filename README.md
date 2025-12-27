@@ -49,6 +49,7 @@ test = "How-much-wood-would-a-woodchuck-chuck"
 # .split(delimiter) - Returns a list of substrings
 print(test.split("-"))         
 # Output: ['How', 'much', 'wood', 'would', 'a', 'woodchuck', 'chuck']
+
 # Split a string into a list
 print("This is another example".split()) 
 # Output: ['This', 'is', 'another', 'example']
