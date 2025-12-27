@@ -1,9 +1,9 @@
 # python-notes
 
 # Python String Methods Cheat Sheet
-
-## Basic String Searching & Indexing
 ```python
+## Basic String Searching & Indexing
+
 animals = "lions tigers and bears"
 
 # Find the index of a character or substring
