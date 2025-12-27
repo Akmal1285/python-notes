@@ -2,10 +2,19 @@
 
 # Python String Methods Cheat Sheet
 
-A collection of commonly used string methods in Python with examples.
+## Basic String Searching & Indexing
+```python
+animals = "lions tigers and bears"
+
+# Find the index of a character or substring
+print(animals.index("g"))      # Output: 8
+print(animals.index("bears"))  # Output: 17
+
+# Check if a substring exists using the 'in' keyword
+print("horses" in animals)     # Output: False
+print("tigers" in animals)     # Output: True
 
 ## Case Transformation
-```python
 print("Mountains".upper())       # Output: MOUNTAINS            
 print("Mountains".lower())       # Output: mountains     
 
