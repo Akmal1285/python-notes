@@ -37,13 +37,31 @@ print("Forest".endswith("rest")) # Output: True
 print("Forest".isnumeric())    # Output: False
 print("12345".isnumeric())     # Output: True
 
+# .isalpha() - Returns True if there are only letters
+print("xyzzy".isalpha())       # Output: True
+
 # Join a list into a string
 words = ["This", "is", "a", "phrase"]
 print(" ".join(words))         # Output: This is a phrase
 
-# Join with custom delimiters
-print("...".join(["Triple", "dots"])) # Output: Triple...dots
-
+#Splitting
+test = "How-much-wood-would-a-woodchuck-chuck"
+# .split(delimiter) - Returns a list of substrings
+print(test.split("-"))         
+# Output: ['How', 'much', 'wood', 'would', 'a', 'woodchuck', 'chuck']
 # Split a string into a list
 print("This is another example".split()) 
 # Output: ['This', 'is', 'another', 'example']
+
+# Modifying
+# .replace(old, new) - Replaces all occurrences
+print(test.replace("wood", "plastic"))  
+# Output: "How much plastic would a plasticchuck chuck"
+
+# Join with custom delimiters
+print("...".join(["Triple", "dots"])) # Output: Triple...dots
+
+# Custom delimiters
+print("...".join(["Triple", "dots"])) # Output: Triple...dots
+
+
