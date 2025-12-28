@@ -64,5 +64,43 @@ print("...".join(["Triple", "dots"])) # Output: Triple...dots
 
 # Custom delimiters
 print("...".join(["Triple", "dots"])) # Output: Triple...dots
+```
 
+
+# Python String List Cheat Sheet
+```python
+
+# List 
+x = ["Now", "we", "are", "cooking!"]
+
+# Modifying content of list
+
+# Append
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.append("Kiwi")
+print(fruits)  #Output: ["Pineapple", "Banana", "Apple", "Melon", "Kiwi"]
+
+# Insert
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+print(fruits)  #Output: ["Orange", "Pineapple", "Banana", "Apple", "Melon"]
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(25, "Peach")
+print(fruits)  #Output: ['Orange', 'Pineapple', 'Banana', 'Apple', 'Melon', 'Peach']
+
+# Remove
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.remove("Melon")
+print(fruits)   #Output: ["Pineapple", "Banana", "Apple"]
+
+# Pop
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.pop(3)
+print(fruits)  #Output: ["Pineapple", "Banana", "Apple"]
+
+# Index insert
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits[2] = "Strawberry"
+print(fruits)  #Output:  ["Pineapple", "Banana", "Strawberryt", "Melon"]
 
