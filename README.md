@@ -139,7 +139,7 @@ def get_coordinates():
 x, y = get_cordinates()
 ```
 
-#List Comprehension
+# List Comprehension
 *A concise way to create lists using a single line of code.
 Syntax: [expression for item in iterable if condition]*
 
