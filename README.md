@@ -113,7 +113,7 @@ print(fruits)  #Output:  ["Pineapple", "Banana", "Strawberryt", "Melon"]
 
 **Key Characteristics**
 
-- Immutable: You cannot add, remove, or change items once defined.
+- **Immutable**: You cannot add, remove, or change items once defined.
 
 - **Ordered**: Items have a defined order that will not change.
 
@@ -156,4 +156,64 @@ long_names = [n for n in names if len(n) > 3]
 # Output: ['Alice, 'Charlie']
 ```
 
+**Practical Application Examples**
 
+**A. Filename Extension Updater**
+
+*Using list comprehension to replace file extensions conditionally.*
+
+```python
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+
+# Logic: Replace 'hpp' with 'h' ONLY if the file ends with 'hpp'
+new_filenames = [f.replace("hpp","h") if f.endswith("hpp") else f for f in filenames]
+print(new_filenames)
+# Output: ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
+```
+
+**B. Pig Latin Translator**
+
+*A fun example of string slicing and joining*
+
+```python
+def pig_latin(text):
+  say = ""
+  # Separate the text into words
+  words = text.split()
+  for word in words:
+    # Create the pig latin word and add it to the list
+    say += word[1:] + word[0] + "ay"+" "
+    # Turn the list back into a phrase
+  return say.strip()
+    
+print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun")) # Should be "rogrammingpay niay ythonpay siay unfay"
+```
+
+**C. Biography List(Tuple unpacking)**
+
+*Iterating through a list of tuples and unpacking data directly into variables.*
+
+```python
+def biography_list(people):
+    # Iterate over each "person" in the given "people" list of tuples. 
+    for person in people:
+
+
+        # Separate the 3 items in each tuple into 3 variables:
+        # "name", "age", and "profession"   
+        (name, age, profession) = person
+
+
+        # Format the required sentence and place the 3 variables 
+        # in the correct placeholders using the .format() method.
+        print(("{} is {} years old and work as {}." ).format(name, age, profession))
+
+# Call to the function:
+biography_list([("Ira", 30, "a Chef"), ("Raj", 35, "a Lawyer"), ("Maria", 25, "an Engineer")])
+
+# Output 
+# Ira is 30 years old and works as a Chef.
+# Raj is 35 years old and works as a Lawyer.
+# Maria is 25 years old and works as an Engineer.
+```
