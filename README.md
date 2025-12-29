@@ -104,14 +104,15 @@ fruits = ["Pineapple", "Banana", "Apple", "Melon"]
 fruits[2] = "Strawberry"
 print(fruits)  #Output:  ["Pineapple", "Banana", "Strawberryt", "Melon"]
 ```
-#Tuple and List Comprehension
+# Tuple and List Comprehension
 
 **Tuple**
+
 *Tuples are used to store multiple items in a single variable.*
 *They are immutable, meaning they cannot be changed after creation.*
 
 **Key Characteristics**
--**Immutable**: You cannot add, remove, or change items once defined.
+-Immutable: You cannot add, remove, or change items once defined.
 
 -**Ordered**: Items have a defined order that will not change.
 
