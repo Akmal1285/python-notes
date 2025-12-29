@@ -103,4 +103,54 @@ print(fruits)  #Output: ["Pineapple", "Banana", "Apple"]
 fruits = ["Pineapple", "Banana", "Apple", "Melon"]
 fruits[2] = "Strawberry"
 print(fruits)  #Output:  ["Pineapple", "Banana", "Strawberryt", "Melon"]
+```
+#Tuple and List Comprehension
+
+**Tuple**
+*Tuples are used to store multiple items in a single variable.*
+*They are immutable, meaning they cannot be changed after creation.*
+
+**Key Characteristics**
+-**Immutable**: You cannot add, remove, or change items once defined.
+
+-**Ordered**: Items have a defined order that will not change.
+
+-**Faster**: Tuples are more memory-efficient and faster than lists.
+
+-**Data Protection**: Ideal for constants or data that should not be accidentally modified.
+
+Example
+```python
+# Creating a Tuple
+fullname = ("John", "M.", "Doe")
+
+# Accessing elements
+print(fullname[0])     # Output: John
+
+# Packing and Unpacking
+# This assign "John" to first, "M" to middle, and "Doe" to last
+(first, middle, last) = fullname
+print(middle)         #Output: M.
+
+# Returning multiple values from a function
+def get_coordinates():
+    return (10, 20)
+x, y = get_cordinates()
+```
+
+#List Comprehension
+*A concise way to create lists using a single line of code.
+Syntax: [expression for item in iterable if condition]*
+
+```python
+# Create a list of multiples of 7
+multiples = [x * 7 forx in range(1,6)]
+# Output: [7, 14, 21, 28, 35]
+
+# Filtering with 'if'
+names = ["Alice", "Bob", "Charlie"]
+long_names = [n for n in names if len(n) > 3]
+# Output: ['Alice, 'Charlie']
+```
+
 
