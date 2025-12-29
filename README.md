@@ -112,13 +112,14 @@ print(fruits)  #Output:  ["Pineapple", "Banana", "Strawberryt", "Melon"]
 *They are immutable, meaning they cannot be changed after creation.*
 
 **Key Characteristics**
--Immutable: You cannot add, remove, or change items once defined.
 
--**Ordered**: Items have a defined order that will not change.
+- Immutable: You cannot add, remove, or change items once defined.
 
--**Faster**: Tuples are more memory-efficient and faster than lists.
+- **Ordered**: Items have a defined order that will not change.
 
--**Data Protection**: Ideal for constants or data that should not be accidentally modified.
+- **Faster**: Tuples are more memory-efficient and faster than lists.
+
+- **Data Protection**: Ideal for constants or data that should not be accidentally modified.
 
 Example
 ```python
@@ -139,7 +140,8 @@ def get_coordinates():
 x, y = get_cordinates()
 ```
 
-# List Comprehension
+**List Comprehension**
+
 *A concise way to create lists using a single line of code.
 Syntax: [expression for item in iterable if condition]*
 
