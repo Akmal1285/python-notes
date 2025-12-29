@@ -130,7 +130,7 @@ fullname = ("John", "M.", "Doe")
 print(fullname[0])     # Output: John
 
 # Packing and Unpacking
-# This assign "John" to first, "M" to middle, and "Doe" to last
+# This assign "John" to first, "M." to middle, and "Doe" to last
 (first, middle, last) = fullname
 print(middle)         #Output: M.
 
@@ -147,7 +147,7 @@ Syntax: [expression for item in iterable if condition]*
 
 ```python
 # Create a list of multiples of 7
-multiples = [x * 7 forx in range(1,6)]
+multiples = [x * 7 for x in range(1,6)]
 # Output: [7, 14, 21, 28, 35]
 
 # Filtering with 'if'
