@@ -217,3 +217,106 @@ biography_list([("Ira", 30, "a Chef"), ("Raj", 35, "a Lawyer"), ("Maria", 25, "a
 # Raj is 35 years old and works as a Lawyer.
 # Maria is 25 years old and works as an Engineer.
 ```
+
+# Dictionaries
+
+*Dictionaries are used to store data values in key:value pairs. They are unordered, changeable (mutable), and do not allow duplicates.*
+
+**Basic Operations**
+
+*A dictionary is defined using curly braces {} with keys and values separated by colons.*
+
+```python
+file_counts = {"jpg": 10, "txt": 14, "csv": 8, "py": 23}
+# Accessing a value using a key
+print(file_counts["txt"])    # Output: 14
+
+# Checking if a key exists
+"jpg" in file_counts   # Output: True
+"html" in file_counts  # Output: False
+```
+
+**Updating & Deleting**
+
+**Adding or Replacing**
+
+*If you assign a value to a key that doesn't exist, it is added, if the key exists, the
+old value is replaced.*
+
+```python
+# Add new key & value
+file_counts = {"jpg": 10, "txt": 14, "csv": 8, "py": 23}
+file_counts["cfg"] = 10
+print(file_counts)     # Output: {'jpg': 10, 'txt': 14, 'csv': 8, 'py': 23, 'cfg': 10}
+
+# Replace existing value
+file_counts["csv"] = 10
+print(file_counts)     # Output: {'jpg': 10, 'txt': 14, 'csv': 10, 'py': 23, 'cfg': 10}
+```
+
+**Deleting**
+```python
+del file_counts["py"]  # Output: {'jpg': 10, 'txt': 14, 'csv': 10, 'cfg': 10}
+```
+
+**Iterating Through Dictionariess**
+*You can loop through keys, values, or both(items)*
+
+**Looping through Keys**
+
+```python
+for extension in file_counts:
+    print(extension)
+# Output: jpg
+#         txt
+#         csv
+#         cfg
+```
+
+**Looping through Items (Key & Value)
+
+```python
+file_counts = {"jpg":10, "txt":14, "csv":8, "py":23}
+for ext, amount in file_counts.items():
+   print("There are {} files with the .{} extension".format(amount,ext))
+# Output: There are 10 files with the .jpg extension
+#         There are 14 files with the .txt extension
+#         There are 8 files with the .csv extension
+#         There are 23 files with the .py extension
+```
+
+**Accessing Keys and Values Directly**
+
+```python
+file_counts = {"jpg":10, "txt":14, "csv":10}
+file_counts.keys()    # Output: dict_keys(['jpg', 'txt', 'csv'])
+file_counts.values()  # Output: dict_values([10, 14, 10])
+# Loop through values only
+for value in file_counts.value():
+    print(value)
+# Output: 10
+#         14
+#         10
+```
+
+**Advanced Dictionary Logic**
+
+**Character Frequency Counter**
+
+*A practical example of using a dictionary to count occurences of items within a string.*
+
+```python
+def count_letters(text):
+    result: {}
+    for letter in text:
+        # If letter isn't in dict, initialize it to 0
+        if letter not in result:
+            result[letter] = 0
+        #Increment the count
+        result[letter] += 1
+    return result
+
+print(count_letters("aaaaa"))   # Output: {'a': 5}
+print(count_letters("Fruits"))  # Output: {'F': 1, 'r': 1, 'u': 1, 'i': 1, 't': 1, 's': 1}
+```
+
