@@ -274,7 +274,7 @@ for extension in file_counts:
 #         cfg
 ```
 
-**Looping through Items (Key & Value)
+**Looping through Items (Key & Value)**
 
 ```python
 file_counts = {"jpg":10, "txt":14, "csv":8, "py":23}
