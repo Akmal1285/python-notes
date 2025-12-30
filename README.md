@@ -220,7 +220,7 @@ biography_list([("Ira", 30, "a Chef"), ("Raj", 35, "a Lawyer"), ("Maria", 25, "a
 
 # Dictionaries
 
-*Dictionaries are used to store data values in key:value pairs. They are unordered, changeable (mutable), and do not allow duplicates.*
+*Dictionaries are used to store data values in [key:value] pairs. They are unordered, changeable (mutable), and do not allow duplicates.*
 
 **Basic Operations**
 
@@ -260,6 +260,7 @@ del file_counts["py"]  # Output: {'jpg': 10, 'txt': 14, 'csv': 10, 'cfg': 10}
 ```
 
 **Iterating Through Dictionariess**
+
 *You can loop through keys, values, or both(items)*
 
 **Looping through Keys**
