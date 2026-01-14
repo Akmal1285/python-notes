@@ -32,6 +32,7 @@ with open("sample_data/declaration.txt", "rt") as textfile:
    print(line)
 ```
 
+
 **File path**
 
 *Windows file directory written in Python*
@@ -43,10 +44,12 @@ Get current working directory
 os.getcwd()
 ```
 
+
 **CWD command for external files:**
 ```python
 outputs['current_directory_before'] = os.getcwd()
 ```
+
 
 **Working with files**
 
@@ -92,4 +95,48 @@ os.path.abspath("spider.txt")
 #This code takes the file name and turns it into an absolute path
 ```
 
+
+**Example of  using the OS function to create a directory and move a file**
+
+```python
+# Create a directory and move a file from one directory to another
+# using low-level OS functions.
+
+import os
+
+# Check to see if a directory named "test1" exists under the current
+# directory. If not, create it:
+dest_dir = os.path.join(os.getcwd(), "test1")
+if not os.path.exists(dest_dir):
+ os.mkdir(dest_dir)
+
+
+# Construct source and destination paths:
+src_file = os.path.join(os.getcwd(), "sample_data", "README.md")
+dest_file = os.path.join(os.getcwd(), "test1", "README.md")
+
+
+# Move the file from its original location to the destination:
+os.rename(src_file, dest_file)
+```
+
+**Example of using Pathlib to create a directory and move a file**
+```python
+# Create a directory and move a file from one directory to another
+# using Pathlib.
+
+from pathlib import Path
+
+# Check to see if the "test1" subdirectory exists. If not, create it:
+dest_dir = Path("./test1/")
+if not dest_dir.exists():
+  dest_dir.mkdir()
+
+# Construct source and destination paths:
+src_file = Path("./sample_data/README.md")
+dest_file = dest_dir / "README.md"
+
+# Move the file from its original location to the destination:
+src_file.rename(dest_file)
+```
 
